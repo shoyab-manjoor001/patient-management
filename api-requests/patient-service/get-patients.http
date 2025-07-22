@@ -1,0 +1,8 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+### GET request to get all patient
+GET http://localhost:8080/patient/getall
+
+###

@@ -29,7 +29,7 @@ public class Patient {
     private LocalDate dateOfBirth;
 
     @NotNull
-    private String registerdDate;
+    private LocalDate registeredDate;
 
     public UUID getId() {
         return id;
@@ -71,14 +71,13 @@ public class Patient {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getRegisterdDate() {
-        return registerdDate;
+    public LocalDate getRegisteredDate() {
+        return registeredDate;
     }
 
-    public void setRegisterdDate(String registerdDate) {
-        this.registerdDate = registerdDate;
+    public void setRegisteredDate(LocalDate registeredDate) {
+        this.registeredDate = registeredDate;
     }
-
 
     @Override
     public String toString() {
@@ -88,7 +87,7 @@ public class Patient {
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", registerdDate='" + registerdDate + '\'' +
+                ", registerdDate='" + registeredDate + '\'' +
                 '}';
     }
 }
