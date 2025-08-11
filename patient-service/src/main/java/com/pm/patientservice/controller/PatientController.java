@@ -1,9 +1,10 @@
 package com.pm.patientservice.controller;
 
+import com.pm.patientservice.dto.PatientRequestDTO;
 import com.pm.patientservice.dto.PatientResponseDTO;
 import com.pm.patientservice.service.PatientService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,5 +31,11 @@ public class PatientController {
     @GetMapping("/getPatient/{email}")
     public Optional<PatientResponseDTO> getPatient(@PathVariable String email) {
         return patientService.getPatientByEmail(email);
+    }
+
+    @PostMapping
+    public ResponseEntity<PatientResponseDTO> newPatient(@Valid @RequestBody PatientRequestDTO patientRequestDTO) {
+        PatientResponseDTO patientResponseDTO = patientService.createNewPatient(patientRequestDTO);
+        return ResponseEntity.ok().body(patientResponseDTO);
     }
 }
