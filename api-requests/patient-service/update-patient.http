@@ -1,0 +1,1 @@
+PUT http://localhost:8080/patient/getPatient/kafka_test11@example.com
