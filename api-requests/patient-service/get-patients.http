@@ -6,3 +6,4 @@ GET https://examples.http-client.intellij.net/get
 GET http://localhost:8080/patient/getall
 
 ###
+GET http://localhost:8080/h2-console/
